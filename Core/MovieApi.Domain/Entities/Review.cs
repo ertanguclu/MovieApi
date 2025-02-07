@@ -7,5 +7,6 @@
         public int UserRating { get; set; }
         public DateTime ReviewDate { get; set; }
         public bool Status { get; set; }
+
     }
 }
