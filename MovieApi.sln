@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35731.43 d17.13
+VisualStudioVersion = 17.13.35731.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieApi.Persistence", "Infrastructure\MovieApi.Persistence\MovieApi.Persistence.csproj", "{4FF341BB-D739-4858-A20A-0D8B06E3A835}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieApi.WebApi", "Presentation\MovieApi.WebApi\MovieApi.WebApi.csproj", "{FB393F47-6D45-45E1-8063-F590F61165A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieApi.Application", "Core\MovieApi.Application\MovieApi.Application.csproj", "{CC50F458-8CEF-4445-B191-3D003166EDC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{FB393F47-6D45-45E1-8063-F590F61165A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB393F47-6D45-45E1-8063-F590F61165A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB393F47-6D45-45E1-8063-F590F61165A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC50F458-8CEF-4445-B191-3D003166EDC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC50F458-8CEF-4445-B191-3D003166EDC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC50F458-8CEF-4445-B191-3D003166EDC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC50F458-8CEF-4445-B191-3D003166EDC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +51,7 @@ Global
 		{6698D3B8-E809-41FE-AF0D-0A8E39E7CE5C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{4FF341BB-D739-4858-A20A-0D8B06E3A835} = {96CCA931-9E59-4292-A399-65F65778C5ED}
 		{FB393F47-6D45-45E1-8063-F590F61165A2} = {65874F34-142A-460D-AB15-557D08F673C7}
+		{CC50F458-8CEF-4445-B191-3D003166EDC8} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {796EA848-431E-4C6E-8806-538E8EFD0A5F}
