@@ -28,6 +28,7 @@ namespace MovieApi.WebApi.Controllers
             _removeMovieCommandHandler = removeMovieCommandHandler;
         }
 
+        [HttpGet]
         public async Task<IActionResult> MovieList()
         {
             var value = await _getMovieQueryHandler.Handle();
