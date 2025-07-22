@@ -19,6 +19,7 @@ namespace MovieApi.Application.Features.MediatorDesignPattern.Handlers.TagHandle
             var values = await _context.Tags.FindAsync(request.TagId);
             return new GetTagByIdQueryResult
             {
+                TagId = values.TagId,
                 Title = values.Title
             };
         }
