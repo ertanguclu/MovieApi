@@ -30,5 +30,19 @@ namespace MovieApi.WebUI.Controllers
 
             return View();
         }
+
+        public async Task<IActionResult> MovieDetail(int id)
+        {
+            id = 0;
+            //var client = _httpClientFactory.CreateClient();
+            //var responseMessage = await client.GetAsync($"https://localhost:7016/api/Movies/{id}");
+            //if (responseMessage.IsSuccessStatusCode)
+            //{
+            //    var jsonData = await responseMessage.Content.ReadAsStringAsync();
+            //    var values = JsonConvert.DeserializeObject<ResultMovieDto>(jsonData);
+            //    return View(values);
+            //}
+            return View();
+        }
     }
 }
