@@ -40,7 +40,17 @@ namespace MovieApi.WebUI.Areas.Admin.Controllers
             var responseMessage = await client.PostAsync("https://localhost:7016/api/Categories", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
-                return RedirectToAction("CategoryList");
+                return RedirectToAction("CategoryList", "AdminCategory", new { area = "Admin" });
+            }
+            return View();
+        }
+        public async Task<IActionResult> DeleteCategory(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.DeleteAsync("https://localhost:7016/api/Categories?id=" + id);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("CategoryList", "AdminCategory", new { area = "Admin" });
             }
             return View();
         }

@@ -2,6 +2,7 @@
 @{
     ViewData["Title"] = "Film Listesi";
     Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
 }
 
 <style>
@@ -207,8 +208,9 @@
             <tbody>
                 @foreach (var item in Model)
                 {
+                    count++;
                     <tr>
-                        <td><div class="movie-id">@item.MovieId</div></td>
+                        <td><div class="movie-id">@count</div></td>
                         <td><strong>@item.Title</strong></td>
                         <td>
                             <span class="rating-pill">
@@ -221,7 +223,7 @@
                                 @(item.Status ? "AKTİF" : "PASİF")
                             </span>
                         </td>
-                        <td><a href="#" class="action-btn btn-delete">Sil</a></td>
+                        <td><a href="/Admin/AdminMovie/DeleteMovie/@item.MovieId" class="action-btn btn-delete">Sil</a></td>
                         <td><a href="#" class="action-btn btn-update">Güncelle</a></td>
                         <td><a href="#" class="action-btn btn-detail">Detay</a></td>
                     </tr>
