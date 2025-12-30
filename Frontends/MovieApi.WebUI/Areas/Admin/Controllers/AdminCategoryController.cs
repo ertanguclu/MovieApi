@@ -26,5 +26,23 @@ namespace MovieApi.WebUI.Areas.Admin.Controllers
 
             return View();
         }
+        [HttpGet]
+        public IActionResult CreateCategory()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> CreateCategory(AdminCreateCategoryDto adminCreateCategoryDto)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var jsonData = JsonConvert.SerializeObject(adminCreateCategoryDto);
+            StringContent stringContent = new StringContent(jsonData, System.Text.Encoding.UTF8, "application/json");
+            var responseMessage = await client.PostAsync("https://localhost:7016/api/Categories", stringContent);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("CategoryList");
+            }
+            return View();
+        }
     }
 }
