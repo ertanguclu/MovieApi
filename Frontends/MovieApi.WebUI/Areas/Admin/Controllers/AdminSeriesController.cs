@@ -16,7 +16,7 @@ namespace SeriesApi.WebUI.Areas.Admin.Controllers
         public async Task<IActionResult> SeriesList()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:7016/api/Series");
+            var responseMessage = await client.GetAsync("https://localhost:7016/api/Serieses");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
