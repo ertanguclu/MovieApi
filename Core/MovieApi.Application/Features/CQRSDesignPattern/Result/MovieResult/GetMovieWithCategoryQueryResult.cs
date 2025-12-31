@@ -1,6 +1,12 @@
-﻿namespace MovieApi.Domain.Entities
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MovieApi.Application.Features.CQRSDesignPattern.Result.MovieResult
 {
-    public class Movie
+    public class GetMovieWithCategoryQueryResult
     {
         public int MovieId { get; set; }
         public string Title { get; set; }
@@ -10,8 +16,8 @@
         public int Duration { get; set; }
         public DateTime ReleaseDate { get; set; }
         public string CreatedYear { get; set; }
-        public string Status { get; set; }
+        public string Status { get; set; } 
         public int CategoryId { get; set; }
-        public Category Category { get; set; }
+        public string CategoryName { get; set; }
     }
 }
